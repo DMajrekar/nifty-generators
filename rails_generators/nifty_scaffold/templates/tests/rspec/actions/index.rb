@@ -1,6 +1,6 @@
   describe "GET index" do
     before(:each) do
-      @<%= singular_name %>s = stub('<%= class_name %>s Array')
+      @<%= singular_name %>s = stub('<%= plural_name %> Array')
       <%= class_name %>.stubs(:all).returns(@<%= singular_name %>s)
     end
 
@@ -13,8 +13,8 @@
       <%= class_name %>.expects(:all).returns([])
     end
 
-    it "should assign the hardware nodes to @<%= singular_name %>s" do
+    it "should assign the hardware nodes to @<%= plural_name %>" do
       get :index
-      assigns[:<%= singular_name %>s].should == @<%= singular_name %>s
+      assigns[:<%= plural_name %>].should == @<%= singular_name %>s
     end
   end

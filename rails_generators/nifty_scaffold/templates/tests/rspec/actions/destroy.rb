@@ -21,6 +21,6 @@
 
     it "should redirect to the index page" do
       delete :destroy, :id => 1
-      response.should redirect_to(<%= singular_name %>s_url)
+      response.should redirect_to(<%= plural_name %>_url)
     end
   end

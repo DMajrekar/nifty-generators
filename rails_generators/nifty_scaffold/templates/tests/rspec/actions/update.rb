@@ -45,7 +45,7 @@
       
       it "should assign the <%= class_name %> to @<%= singular_name %>" do
         put :update, :id => 1, :<%= singular_name %> => @<%= singular_name %>_params
-        assigns[@<%= singular_name %>].should == @<%= singular_name %>
+        assigns[:<%= singular_name %>].should == @<%= singular_name %>
       end
     end
   end
